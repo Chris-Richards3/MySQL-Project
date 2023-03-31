@@ -21,7 +21,7 @@ The gym's app includes features that benefit our customers and the gym as a whol
 
 # Data model
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Gym%20Data%20Model.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Gym%20Data%20Model.png)
 
 Explanation - There are many different relationships involved with the entities in a data model of a gym. One gym can have many employees, as well as many transactions. In regards to members, members can also have many transactions, can attend many personal sessions, and can attend many group sessions. Group sessions can have many members attend it. Employees that are trainers can work many personal sessions, group sessions, and virtual sessions. A supplier can have many pieces of equipment. Each class type can have many group sessions, and may use many different kinds of equipment. Each app can have many virtual sessions from this gym. Finally, each membership type will be chosen by many members. 
 
