@@ -153,6 +153,4 @@ GROUP BY Apps.appID;
 
 ![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/QueryMatrix.PNG)
 
-# DataBase Information
 
-ns_21482_8
