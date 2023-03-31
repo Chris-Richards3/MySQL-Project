@@ -2,7 +2,7 @@
 Completed gym data model with corresponding subqueries related to efficient management
 
 
-# TEAM: 21482_8 and Team Members
+# Team Members
 
 - Claire Shur (https://github.com/claireshur/Mist4610-Gym)
 -  Kole Piercy (https://github.com/piercyko/Gym-Database)
