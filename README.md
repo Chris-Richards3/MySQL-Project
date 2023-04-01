@@ -10,9 +10,9 @@ Completed gym data model with corresponding subqueries related to efficient mana
 -  Chris Richards (https://github.com/Chris-Richards3/MySQL-Project)
 -  Jack Mannion (https://github.com/JackMannion01/GymSQLDataBase)
 
-# Problem Description
+# Project Description
 
-Our project was focused on creating a model and database for a gym. We break down all the aspects and interactions that occur at an individual, well-operated commercial gym. Though there are always ways to improve a gym, we focused on our augmentation process on a growing trend, home workouts.
+Our project was focused on creating a model and database for a gym. We started the project by breaking down all the aspects and interactions that occur at a single well-operated gym. Though there are always ways to improve a gym, we focused on our augmentation process on a growing trend, home workouts.
 
 Our first entity we focused on implementing was a virtual session entity. There are countless personal and health limitations that don't allow people to physically go to the gym. These sessions are taught by trainers at the gym to allow people to still stay active and healthy from their home. Users can access these virtual sessions through an application. 
 
