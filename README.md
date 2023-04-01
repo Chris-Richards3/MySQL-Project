@@ -44,6 +44,7 @@ GROUP BY className
 ORDER BY COUNT(Attendance.memID) DESC;
 ```
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/1.png)
 
 **2. List any members that have not participated in a personal session** 
