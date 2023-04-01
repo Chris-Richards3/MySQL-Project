@@ -58,6 +58,7 @@ WHERE NOT EXISTS (SELECT memID FROM PersonalSessions WHERE PersonalSessions.memI
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/2.png)
 
 **3. Members who attended at least one group session in the past 3 years, and how many sessions they attended**
@@ -74,6 +75,7 @@ HAVING dateTime BETWEEN '2020-03-30 12:00:00' AND '2023-03-30 12:00:00';
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/3.png)
 
 **4. Average time per session for Group Sessions and Personal Sessions**
@@ -88,6 +90,7 @@ JOIN PersonalSessions ON Employees.employeeID = PersonalSessions.employeeID;
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/4.png)
 
 **5. What Group Sessions are hard and over 80 minutes long**
@@ -102,6 +105,7 @@ WHERE difficulty = 'Hard' AND duration > 80;
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/5.png)
 
 **6. Which supplier and its specialty has an average maintenance cost of their equipment that is greater than 2 times the average maintenance cost of all equipment**
@@ -117,6 +121,7 @@ HAVING AVG(avgMaintCost)>2*(SELECT AVG(avgMaintCost) FROM Equipment);
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/6.png)
 
 **7. Percentage of employees that are used for personal sessions**
@@ -130,6 +135,7 @@ JOIN Employees ON PersonalSessions.employeeID=Employees.employeeID;
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/7.png)
 
 **8. Name and address of the member who has attended the most personal sessions, and which staff they trained with** 
@@ -147,6 +153,7 @@ LIMIT 1;
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/8.png)
 
 **9. Number of customers holding different membership types in descending order**
@@ -162,6 +169,7 @@ ORDER BY COUNT(memID) DESC;
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/9.png)
 
 **10. What are the app names and platforms and how many virtual sessions it runs with a rating with 4 or higher**
@@ -177,6 +185,7 @@ GROUP BY Apps.appID;
 ```
 
 *Output:*
+
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/10.png)
 
 ## Query Matrix 
