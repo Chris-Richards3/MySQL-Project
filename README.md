@@ -31,18 +31,19 @@ Explanation - There are many different relationships involved with the entities 
 
 # 10 Queries
 
-1. List all the classes offered by the gym and the amount of members that have attended each class. List the results from most attendance to least attendance. 
+**1. List all the classes offered by the gym and the amount of members that have attended each class. List the results from most attendance to least attendance.** 
 
 Relevancy - Gym owners should know which classes are most popular and least popular, to determine which classes to add more options of or which might need to be taken away.
 
+``
 SELECT className, COUNT(Attendance.memID)
 FROM ClassType
 JOIN GroupSessions ON ClassType.classID=GroupSessions.classID
 JOIN Attendance ON GroupSessions.groupID=Attendance.groupID
 GROUP BY className
 ORDER BY COUNT(Attendance.memID) DESC;
-
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/1.png)
+``
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/1.png)
 
 2. List any members that have not participated in a personal session 
 
@@ -52,7 +53,7 @@ SELECT firstName, lastName
 FROM Members
 WHERE NOT EXISTS (SELECT memID FROM PersonalSessions WHERE PersonalSessions.memID=Members.memID);
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/2.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/2.png)
 
 3. 3. Members who attended at least one group session in the past 3 years, and how many sessions they attended
 
@@ -65,7 +66,7 @@ JOIN GroupSessions ON Attendance.groupID=GroupSessions.groupID
 GROUP BY firstName, lastName, dateTime
 HAVING dateTime BETWEEN '2020-03-30 12:00:00' AND '2023-03-30 12:00:00';
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/3.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/3.png)
 
 4. Average time per session for Group Sessions and Personal Sessions
 
@@ -76,7 +77,7 @@ FROM GroupSessions
 JOIN Employees ON GroupSessions.employeeID = Employees.employeeID
 JOIN PersonalSessions ON Employees.employeeID = PersonalSessions.employeeID;
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/4.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/4.png)
 
 5. What Group Sessions are hard and over 80 minutes long
 
@@ -87,7 +88,7 @@ FROM ClassType
 JOIN GroupSessions ON ClassType.classID = GroupSessions.classID
 WHERE difficulty = 'Hard' AND duration > 80;
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/5.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/5.png)
 
 6. Which supplier and its specialty has an average maintenance cost of their equipment that is greater than 2 times the average maintenance cost of all equipment
 
@@ -99,7 +100,7 @@ JOIN Equipment ON Supplier.supplierID=Equipment.supplierID
 GROUP BY suppName, Specialty
 HAVING AVG(avgMaintCost)>2*(SELECT AVG(avgMaintCost) FROM Equipment);
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/6.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/6.png)
 
 7. Percentage of employees that are used for personal sessions
 
@@ -109,7 +110,7 @@ SELECT CONCAT(ROUND((COUNT(PersonalSessions.employeeID)/(SELECT COUNT(Employees.
 FROM PersonalSessions
 JOIN Employees ON PersonalSessions.employeeID=Employees.employeeID;
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/7.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/7.png)
 
 8. Name and address of the member who has attended the most personal sessions, and which staff they trained with 
 
@@ -123,7 +124,7 @@ GROUP BY Members.firstName, Members.lastName, address, Employees.firstName, Empl
 ORDER BY COUNT(PersonalSessions.dateTime) DESC
 LIMIT 1;
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/8.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/8.png)
 
 9. Number of customers holding different membership types in descending order
 
@@ -135,7 +136,7 @@ JOIN Members ON MembershipType.memTypeID=Members.memTypeID
 GROUP BY memTypeName
 ORDER BY COUNT(memID) DESC;
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/9.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/9.png)
 
 10. What are the app names and platforms and how many virtual sessions it runs with a rating with 4 or higher
 
@@ -147,7 +148,7 @@ JOIN VirtualSessions ON Apps.appID = VirtualSessions.appID
 WHERE rating REGEXP('^4')
 GROUP BY Apps.appID;
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/Query%20Response/10.png)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/10.png)
 
 ## Query Matrix 
 
