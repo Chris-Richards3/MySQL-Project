@@ -46,7 +46,7 @@ ORDER BY COUNT(Attendance.memID) DESC;
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/1.png)
 
-2. List any members that have not participated in a personal session 
+**2. List any members that have not participated in a personal session** 
 
 Relevancy - Shows which members to speak to next about trying out a personal session, don’t want to market to customers who already participate in personal sessions.
 
@@ -59,7 +59,7 @@ WHERE NOT EXISTS (SELECT memID FROM PersonalSessions WHERE PersonalSessions.memI
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/2.png)
 
-3. Members who attended at least one group session in the past 3 years, and how many sessions they attended
+**3. Members who attended at least one group session in the past 3 years, and how many sessions they attended**
 
 Relevancy -  Showcases the usage of the various programs implemented into memberships. This information is useful to provide insight to see if these programs are valuable to members; knowing this information can ultimately increase satisfaction in the long run.
 
@@ -75,7 +75,7 @@ HAVING dateTime BETWEEN '2020-03-30 12:00:00' AND '2023-03-30 12:00:00';
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/3.png)
 
-4. Average time per session for Group Sessions and Personal Sessions
+**4. Average time per session for Group Sessions and Personal Sessions**
 
 Relevancy - An estimate of how long to expect a group session to go on for as opposed to a personal session.
 
@@ -89,7 +89,7 @@ JOIN PersonalSessions ON Employees.employeeID = PersonalSessions.employeeID;
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/4.png)
 
-5. What Group Sessions are hard and over 80 minutes long
+**5. What Group Sessions are hard and over 80 minutes long**
 
 Relevancy - To find sessions for customers who want more of a challenge and have a specific amount of time that they want to exercise for. Can be adjusted for difficulty and time limit.
 
@@ -103,7 +103,7 @@ WHERE difficulty = 'Hard' AND duration > 80;
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/5.png)
 
-6. Which supplier and its specialty has an average maintenance cost of their equipment that is greater than 2 times the average maintenance cost of all equipment
+**6. Which supplier and its specialty has an average maintenance cost of their equipment that is greater than 2 times the average maintenance cost of all equipment**
 
 Relevancy - This information is useful to a gym owner to visualize costs and pinpoint which assets are detrimental and which ones need review. This information helps minimize waste, reduce cost, and modify business plans into a more effective, more efficient model. 
 
@@ -118,7 +118,7 @@ HAVING AVG(avgMaintCost)>2*(SELECT AVG(avgMaintCost) FROM Equipment);
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/6.png)
 
-7. Percentage of employees that are used for personal sessions
+**7. Percentage of employees that are used for personal sessions**
 
 Relevancy - Which employees are involved in conducting personal sessions versus which employees work other positions. Might help determine what type of employee to hire next.
 
@@ -131,7 +131,7 @@ JOIN Employees ON PersonalSessions.employeeID=Employees.employeeID;
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/7.png)
 
-8. Name and address of the member who has attended the most personal sessions, and which staff they trained with 
+**8. Name and address of the member who has attended the most personal sessions, and which staff they trained with** 
 
 Relevancy - Gym owners would like to know who their most involved customers are, to keep them happy and make sure they spread the word about their gym.
 
@@ -148,7 +148,7 @@ LIMIT 1;
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/8.png)
 
-9. Number of customers holding different membership types in descending order
+**9. Number of customers holding different membership types in descending order**
 
 Relevancy: This allows the managers to see the most popular membership options and make decisions based on the numerical distribution.
 
@@ -163,7 +163,7 @@ ORDER BY COUNT(memID) DESC;
 *Output:*
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/9.png)
 
-10. What are the app names and platforms and how many virtual sessions it runs with a rating with 4 or higher
+**10. What are the app names and platforms and how many virtual sessions it runs with a rating with 4 or higher**
 
 Relevancy: This allows the gym managers and trainers to figure out what apps are highly rated, and how many virtual sessions are actually being used by this app. This can be eye opening with how many virtual sessions offered and only very few of them are on highly rated apps, so changes probably need to be made.
 
