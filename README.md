@@ -190,6 +190,6 @@ GROUP BY Apps.appID;
 
 ## Query Matrix 
 
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/QueryMatrix.PNG)
+![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/QueryMatrix.PNG)
 
 
