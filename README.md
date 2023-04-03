@@ -1,9 +1,13 @@
 # Table of Contents
-[Project Description](#Project-Description)
-[Database Model](#Database-Model)
-[10 Complex Queries](#10-Complex-Queries)
-  [Query Matrix](#Query-Matrix)
-[Data Dictionary](#Data-Dictionary)
+*[Project Description](#Project-Description)
+
+*[Database Model](#Database-Model)
+
+*[10 Complex Queries](#10-Complex-Queries)
+
+  *[Query Matrix](#Query-Matrix)
+  
+*[Data Dictionary](#Data-Dictionary)
 
 # Team Members
 
