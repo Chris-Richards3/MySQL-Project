@@ -12,7 +12,7 @@ Our project was focused on creating a well-formed database for a gym with a high
 
 Our group was also tasked with augmenting our business of choice. Though there are always ways to improve a gym, we focused on our augmentation on a growing trend, home workouts. There are countless personal & health limitations that prevent people from physically going to a gym which justified the need for a new service: Virtual Training Sessions. In order to incorporate our augmentation, our group first created a many-to-many relationship between Employees and Apps with Virtual Sessions as an associative entity that would track pertinent information relating to these sessions. The use of virtual sessions gave our gym a new source of income and we believe it would help retain customer memberships. 
 
-The most challenging deliverable our group completed was creating 10 Complex Queries that utilized high-level MySQL functions such as multi-table JOINS, correlated subqueries, EXISTS, NOT EXISTS, REGEXP, and more. Each of the queries we created were constructed with the goal of generating pertinent business value to the gym owner.  
+The most challenging deliverable our group completed was creating 10 Complex Queries that utilized high-level MySQL functions & concepts such as multi-table JOINS, correlated subqueries, EXISTS, NOT EXISTS, REGEXP, and more. Each of the queries we created were constructed with the goal of generating pertinent business value to the gym owner.  
 
 
 # Data model
