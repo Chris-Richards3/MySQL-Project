@@ -1,7 +1,3 @@
-# GymSQLDataBase
-Completed gym data model with corresponding subqueries related to efficient management
-
-
 # Team Members
 
 -  Chris Richards (https://github.com/Chris-Richards3/MySQL-Project)
@@ -12,11 +8,11 @@ Completed gym data model with corresponding subqueries related to efficient mana
 
 # Project Description
 
-Our project was focused on creating a model and database for a gym. We started the project by breaking down all the aspects and interactions that occur at a single well-operated gym. Though there are always ways to improve a gym, we focused on our augmentation process on a growing trend, home workouts.
+Our project was focused on creating a well-formed database for a gym with a high degree of fidelity. We started the project by breaking down all the aspects and interactions that occur at a single well-operated gym. Our completed database adheres by the First, Second, & Third Normal Form and incorporates several business functions in a gym including Member Information, Memberships, Financial Information, Equipment Information, and all the various services the gym offers (Personal Sessions, Group Sessions, & even Virtual Sessions). The final database is compromsied of 13 different tables that are all linked together with one-to-many identifying & non-identifying relationships. Additionally, all the tables were populated with information using MySQL Workbench, Microsoft Excel, and Mockaroo.
 
-Our first entity we focused on implementing was a virtual session entity. There are countless personal and health limitations that don't allow people to physically go to the gym. These sessions are taught by trainers at the gym to allow people to still stay active and healthy from their home. Users can access these virtual sessions through an application. 
+Our group was also tasked with augmenting our business of choice. Though there are always ways to improve a gym, we focused on our augmentation on a growing trend, home workouts. There are countless personal & health limitations that prevent people from physically going to a gym which justified the need for a new service: Virtual Training Sessions. In order to incorporate our augmentation, our group first created a many-to-many relationship between Employees and Apps with Virtual Sessions as an associative entity that would track pertinent information relating to these sessions. The use of virtual sessions gave our gym a new source of income and we believe it would help retain customer memberships. 
 
-The gym's app includes features that benefit our customers and the gym as a whole. Previously mentioned, it allows members from home to watch these virtual sessions and perform them at home. The app also allows customers coming to pull up a barcode and check in quickly. Members can leave reviews too about their thoughts on the app which allows the gym to receive feedback and improve upon it.
+The most challenging deliverable our group completed was creating 10 Complex Queries that utilized high-level MySQL functions such as multi-table JOINS, correlated subqueries, EXISTS, NOT EXISTS, REGEXP, and more. Each of the queries we created were constructed with the goal of generating pertinent business value to the gym owner.  
 
 
 # Data model
@@ -25,9 +21,6 @@ The gym's app includes features that benefit our customers and the gym as a whol
 
 Explanation - There are many different relationships involved with the entities in a data model of a gym. One gym can have many employees, as well as many transactions. In regards to members, members can also have many transactions, can attend many personal sessions, and can attend many group sessions. Group sessions can have many members attend it. Employees that are trainers can work many personal sessions, group sessions, and virtual sessions. A supplier can have many pieces of equipment. Each class type can have many group sessions, and may use many different kinds of equipment. Each app can have many virtual sessions from this gym. Finally, each membership type will be chosen by many members. 
 
-# Data Dictionary 
-
-![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/data%20dictionary.pdf)
 
 # 10 Queries
 
@@ -193,4 +186,7 @@ Relevancy: This allows the gym managers and trainers to figure out what apps are
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/QueryMatrix.PNG)
 
+# Data Dictionary 
+
+![alt text](https://github.com/JackMannion01/GymSQLDataBase/blob/main/data%20dictionary.pdf)
 
