@@ -1,4 +1,6 @@
 # Table of Contents
+* [Team Members](#Team-Members)
+
 * [Project Description](#Project-Description)
 
 * [Database Model](#Database-Model)
