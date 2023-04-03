@@ -201,5 +201,5 @@ Relevancy: This allows the gym managers and trainers to figure out what apps are
 
 # Data Dictionary 
 
-[File](https://github.com/JackMannion01/GymSQLDataBase/blob/main/data%20dictionary.pdf)
+[File](https://github.com/Chris-Richards3/MySQL-Project/blob/main/data%20dictionary.pdf)
 
