@@ -12,7 +12,7 @@ Our project was focused on creating a well-formed database for a gym with a high
 
 Our group was also tasked with augmenting our business of choice. Though there are always ways to improve a gym, we focused on our augmentation on a growing trend, home workouts. There are countless personal & health limitations that prevent people from physically going to a gym which justified the need for a new service: Virtual Training Sessions. In order to incorporate our augmentation, our group first created a many-to-many relationship between Employees and Apps with Virtual Sessions as an associative entity that would track pertinent information relating to these sessions. The use of virtual sessions gave our gym a new source of income and we believe it would help retain customer memberships. 
 
-The most challenging deliverable our group completed was creating 10 Complex Queries that utilized high-level MySQL functions & concepts such as multi-table JOINS, correlated subqueries, EXISTS, NOT EXISTS, REGEXP, and more. Each of the queries we created were constructed with the goal of generating pertinent business value to the gym owner. [Queries](#10-Queries)
+The most challenging deliverable our group completed was creating 10 Complex Queries that utilized high-level MySQL functions & concepts such as multi-table JOINS, correlated subqueries, EXISTS, NOT EXISTS, REGEXP, and more. Each of the queries we created were constructed with the goal of generating pertinent business value to the gym owner. [Queries](#10-Complex-Queries)
 
 
 # Database Model
@@ -22,7 +22,7 @@ The most challenging deliverable our group completed was creating 10 Complex Que
 Explanation - There are many different relationships involved with the entities in a data model of a gym. One gym can have many employees, as well as many transactions. In regards to members, members can also have many transactions, can attend many personal sessions, and can attend many group sessions. Group sessions can have many members attend it. Employees that are trainers can work many personal sessions, group sessions, and virtual sessions. A supplier can have many pieces of equipment. Each class type can have many group sessions, and may use many different kinds of equipment. Each app can have many virtual sessions from this gym. Finally, each membership type will be chosen by many members. 
 
 
-# 10 Queries
+# 10 Complex Queries
 
 **1. List all the classes offered by the gym and the amount of members that have attended each class. List the results from most attendance to least attendance.** 
 
