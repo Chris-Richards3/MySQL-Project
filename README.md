@@ -52,7 +52,7 @@ Relevancy - Gym owners should know which classes are most popular and least popu
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/1.png)
 
-**2. List any members that have not participated in a personal session** 
+**2. List any members that have not participated in a personal session.** 
 
 ```
 SELECT firstName, lastName
@@ -66,7 +66,7 @@ Relevancy - Shows which members to speak to next about trying out a personal ses
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/2.png)
 
-**3. Members who attended at least one group session in the past 3 years, and how many sessions they attended**
+**3. List any members who have attended at least one group session in the past 3 years, and also list how many sessions they have attended.**
 
 ```
 SELECT firstName, lastName, COUNT(attenID), dateTime
@@ -83,7 +83,7 @@ Relevancy -  Showcases the usage of the various programs implemented into member
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/3.png)
 
-**4. Average time per session for Group Sessions and Personal Sessions**
+**4. Calculate the average time of all sessions for Group Sessions and Personal Sessions.**
 
 ```
 SELECT AVG(GroupSessions.duration) AS 'Group Sessions', AVG (PersonalSessions.duration) AS 'Personal Sessions'
@@ -98,7 +98,7 @@ Relevancy - An estimate of how long to expect a group session to go on for as op
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/4.png)
 
-**5. What Group Sessions are hard and over 80 minutes long**
+**5. List all Group Sessions that are "hard" and were longer than 80 minutes.**
 
 ```
 SELECT ClassType.classID, className
@@ -113,7 +113,7 @@ Relevancy - To find sessions for customers who want more of a challenge and have
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/5.png)
 
-**6. Which supplier and its specialty has an average maintenance cost of their equipment that is greater than 2 times the average maintenance cost of all equipment**
+**6. List the supplier name and supplier specialty that has an average maintenance cost of their equipment that is greater than 2 times the average maintenance cost of all equipment.**
 
 ```
 SELECT suppName, specialty, AVG(avgMaintCost) AS 'Avg Maint Cost'
@@ -129,7 +129,7 @@ Relevancy - This information is useful to a gym owner to visualize costs and pin
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/6.png)
 
-**7. Percentage of employees that are used for personal sessions**
+**7. Calculate the percentage of employees that have been the trainer for at least one personal session.**
 
 ```
 SELECT CONCAT(ROUND((COUNT(PersonalSessions.employeeID)/(SELECT COUNT(Employees.employeeID) FROM Employees)*100),2),'%') AS '% Trainers in Personal Session'
@@ -143,7 +143,7 @@ Relevancy - Which employees are involved in conducting personal sessions versus 
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/7.png)
 
-**8. Name and address of the member who has attended the most personal sessions, and which staff they trained with** 
+**8. List the name and address of the individual member who has attended the most personal sessions, and which employee(s) they have trained with.** 
 
 ```
 SELECT Members.firstName, Members.lastName, address, Employees.firstName, Employees.lastName, COUNT(PersonalSessions.dateTime)
@@ -161,7 +161,7 @@ Relevancy - Gym owners would like to know who their most involved customers are,
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/8.png)
 
-**9. Number of customers holding different membership types in descending order**
+**9. List the number of customers holding different membership types in descending order.**
 
 ```
 SELECT memTypeName, COUNT(memID)
@@ -177,7 +177,7 @@ Relevancy: This allows the managers to see the most popular membership options a
 
 ![alt text](https://github.com/Chris-Richards3/MySQL-Project/blob/main/Query%20Responses/9.png)
 
-**10. What are the app names and platforms and how many virtual sessions it runs with a rating with 4 or higher**
+**10. List the app name(s), platforms and the amount of virtual sessions it has been connected to. Only list Apps with a rating with 4.0 or greater.**
 
 ```
 SELECT appName, platform, COUNT(virtualID) as 'Virtual Session Ids', rating
